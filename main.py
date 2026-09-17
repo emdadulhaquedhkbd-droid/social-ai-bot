@@ -43,9 +43,8 @@ async def generate_post(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Generating post with Gemini...")
     
     try:
-        # Standard model name used here
         response = client.models.generate_content(
-            model='gemini-1.5-flash',
+            model='gemini-2.5-flash',
             contents=f"Create an engaging Facebook post about: {topic}. Include relevant hashtags and emojis."
         )
         post_content = response.text
