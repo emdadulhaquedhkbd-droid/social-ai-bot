@@ -44,7 +44,7 @@ async def generate_post(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.6-flash',
             contents=f"Create an engaging Facebook post about: {topic}. Include relevant hashtags and emojis."
         )
         post_content = response.text
